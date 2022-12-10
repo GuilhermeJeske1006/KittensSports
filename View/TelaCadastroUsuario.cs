@@ -37,7 +37,7 @@ namespace KittensSports.View
             if (!TemEntradasValidas())
                 return;
 
-            //Montar o objeto para gravação
+            //Montar o objeto para gravaçãoasd
             Usuario objUsuario = new Usuario(ttbUsername.Text,
                 ttbSenha.Text, ttbNome.Text, ttbEmail.Text);
 

@@ -44,7 +44,7 @@ namespace KittensSports.View
             if (!TemEntradasValidas())
                 return;
 
-            //Montar o objeto para gravação gerg
+            //Montar o objeto para gravação gergasdasd
             Treinamento objTreinamento = new Treinamento(0, lbNome.Text, float.Parse(lbVelocidade.Text), float.Parse(lbTempo.Text),
                float.Parse(lbInclinacao.Text), float.Parse(lbBpm.Text));
 
