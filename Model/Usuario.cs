@@ -1,4 +1,4 @@
-﻿using KittensSports.Controller;
+using KittensSports.Controller;
 
 namespace KittensSports.Model
 {
@@ -25,6 +25,10 @@ namespace KittensSports.Model
         public bool Gravar()
         {
             return new UsuarioController().Gravar(this);
+        }
+        public bool Alterar()
+        {
+            return new UsuarioController().Alterar(this);
         }
     }
 }

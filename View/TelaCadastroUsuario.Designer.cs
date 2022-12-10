@@ -39,6 +39,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnVer = new System.Windows.Forms.Button();
             this.btnGravar = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ttbNome
@@ -136,11 +137,22 @@
             this.btnGravar.UseVisualStyleBackColor = true;
             this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Location = new System.Drawing.Point(14, 298);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterar.TabIndex = 11;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
             // TelaCadastroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(289, 339);
+            this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnGravar);
             this.Controls.Add(this.btnVer);
             this.Controls.Add(this.label5);
@@ -172,5 +184,6 @@
         private Label label5;
         private Button btnVer;
         private Button btnGravar;
+        private Button btnAlterar;
     }
 }

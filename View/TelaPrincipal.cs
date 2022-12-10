@@ -31,7 +31,7 @@ namespace KittensSports
 
         private void gerenciarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            new TelaGerenciarUsuario().ShowDialog();
         }
     }
 }

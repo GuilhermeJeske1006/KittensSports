@@ -1,4 +1,4 @@
-﻿using KittensSports.Model;
+using KittensSports.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +16,29 @@ namespace KittensSports.View
         public TelaCadastroUsuario()
         {
             InitializeComponent();
+        }
+
+        public TelaCadastroUsuario(Usuario obj, bool alterando)
+        {
+            InitializeComponent();
+            if (alterando)
+            {
+
+                ttbUsername.Enabled = false;
+                btnGravar.Visible = false;
+                btnAlterar.Visible = true;
+
+            }
+            else
+            {
+                btnGravar.Visible = true;
+                btnAlterar.Visible = false;
+            }
+            ttbNome.Text = obj.NomeCompleto.ToString();
+            ttbEmail.Text = obj.Email.ToString();
+            ttbUsername.Text = obj.Username.ToString();
+            ttbSenha.Text = obj.Password.ToString();
+            
         }
 
         private void btnVer_Click(object sender, EventArgs e)
@@ -73,6 +96,27 @@ namespace KittensSports.View
                 return false;
             }
             return true;
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (TemEntradasValidas())
+            {
+                //Montar objeto
+                Usuario objUsuario = new Usuario(ttbUsername.Text,
+                ttbSenha.Text, ttbNome.Text, ttbEmail.Text);
+                //Alterar no banco
+                bool ok = objUsuario.Alterar();
+
+                if (ok)
+                {
+                    MessageBox.Show("Usuario alterado com sucesso!");
+                    //LimpaTela();
+                }
+                else
+                    MessageBox.Show("Erro ao alterar registro no banco de dados! Tente novamente!");
+                this.Close();
+            }
         }
     }
 }
