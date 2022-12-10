@@ -38,7 +38,7 @@ namespace KittensSports.View
                     //executando consulta no banco
                     resultadoConsulta = TreiController.BuscarPorNome(ttbBusca.Text);
 
-                    //verificando se encontrou alguma coisa
+                    //verificando se encontrou alguma coisa kseisu
                     if (resultadoConsulta.Rows.Count > 0)
                     {
                         dataGridView.DataSource = resultadoConsulta;
