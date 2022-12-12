@@ -24,6 +24,11 @@ namespace KittensSports.View
 
         }
 
+        private void LimpaTela()
+        {
+            dataGridView.DataSource = "";
+            ttbBusca.Clear();
+        }
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -47,6 +52,7 @@ namespace KittensSports.View
                     else
                     {
                         MessageBox.Show("Não foi encontrado resultado para a chave informada!");
+                        LimpaTela();
                         return;
                     }
                 }
