@@ -34,7 +34,7 @@ namespace KittensSports.View
             {
                 if (DgvTreinamento.CurrentRow.Cells != null)
                 {
-                    //Montar objeto asd
+                    //Montar objeto
                    // TreinamentoUsuario Treinamento = new TreinamentoUsuario();
 
                     new TreinamentoAssociados().ShowDialog();
@@ -65,26 +65,5 @@ namespace KittensSports.View
                     return;
                 }
             }
-
-        private void ttbTreino_Click(object sender, EventArgs e)
-        {
-            UsuarioController UsuController = new UsuarioController();
-            DataTable resultadoConsulta = new DataTable();
-
-            try
-            {
-                resultadoConsulta = UsuController.BuscarUsuarios();
-                if (resultadoConsulta.Rows.Count > 0)
-                    DgvUsuario.DataSource = resultadoConsulta;
-                else
-                    MessageBox.Show("Não foi encontrado resultados para esta chave de busca!");
-                return;
-            }
-            catch
-            {
-                MessageBox.Show("Erro ao comunicar com o banco de dados! Tente novamente!");
-                return;
-            }
-        }
     }
 }

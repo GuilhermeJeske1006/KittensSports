@@ -18,11 +18,6 @@ namespace KittensSports.View
         {
             InitializeComponent();
         }
-        private void LimpaTela()
-        {
-            DgvUsuario.DataSource = "";
-            tbBuscar.Clear();
-        }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -47,7 +42,6 @@ namespace KittensSports.View
                     else
                     {
                         MessageBox.Show("Não foi encontrado resultado para a chave informada!");
-                        LimpaTela();
                         return;
                     }
                 }

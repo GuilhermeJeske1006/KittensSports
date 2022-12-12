@@ -17,17 +17,6 @@ namespace KittensSports.View
         {
             InitializeComponent();
         }
-
-        private void LimpaTela()
-        {
-            lbBpm.Clear();
-            lbInclinacao.Clear();
-            lbNome.Clear();
-            lbTempo.Clear();
-            lbVelocidade.Clear();
-        }
-
-
         public TelaCadastroTreinamento(Treinamento obj, bool alterando)
         {
             InitializeComponent();
@@ -109,11 +98,6 @@ namespace KittensSports.View
                     MessageBox.Show("Erro ao alterar registro no banco de dados! Tente novamente!");
                 this.Close();
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            LimpaTela();
         }
     }
 }
