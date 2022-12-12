@@ -34,7 +34,7 @@ namespace KittensSports.View
             {
                 if (DgvTreinamento.CurrentRow.Cells != null)
                 {
-                    //Montar objeto
+                    //Montar objeto asd
                    // TreinamentoUsuario Treinamento = new TreinamentoUsuario();
 
                     new TreinamentoAssociados().ShowDialog();
