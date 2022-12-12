@@ -9,13 +9,13 @@ namespace KittensSports.Model
     public class TreinamentoUsuario
     {
         public int Id { get; private set; }
-        public Treinamento treinamento { get; private set; }
-        public Usuario usuario { get; private set; }
-        public TreinamentoUsuario(int id, Usuario usuario, Treinamento treinamento)
+        public string Usuario { get; private set; }
+        public float Treinamento { get; private set; }
+        public TreinamentoUsuario(int id, string usuario, float treinamento)
         {
             Id = id;
-            this.treinamento = treinamento;
-            this.usuario = usuario;
+            Treinamento = treinamento;
+            Usuario = usuario;
         }
     }
 }

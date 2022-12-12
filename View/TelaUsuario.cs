@@ -21,11 +21,11 @@ namespace KittensSports.View
             InitializeComponent();
         }
 
-        public TelaUsuario(TreinamentoUsuario obj)
+        public TelaUsuario(TreinamentoUsuario obj, bool alterando)
         {
-           // InitializeComponent();
-           // ttbUsuario.Text = obj.Usuario;
-           // ttbTreino.Text = obj.Treinamento;
+            InitializeComponent();
+            ttbUsuario.Text = obj.Usuario;
+            ttbTreino.Text = obj.Treinamento.ToString();
         }
             private void BtnAssociar_Click(object sender, EventArgs e)
             {
@@ -33,10 +33,9 @@ namespace KittensSports.View
                 return;
 
                  //Montar objeto 
-                // ttbTreino.Text = DgvTreinamento.CurrentRow.Cells[0].Value;
-                // TreinamentoUsuario Treinamento = new TreinamentoUsuario(0, ttbUsuario.Text, ttbTreino.Text);
-                 //   if (DgvUsuario.CurrentRow.Cells != null)
-                 //       if(DgvTreinamento.CurrentRow.Cells != null)
+                 TreinamentoUsuario Treinamento = new TreinamentoUsuario(0, ttbUsuario.Text, float.Parse(ttbTreino.Text));
+                   if (DgvUsuario.CurrentRow.Cells != null)
+                        if(DgvTreinamento.CurrentRow.Cells != null)
 
                         new TreinamentoAssociados().ShowDialog();
 
