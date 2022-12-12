@@ -76,7 +76,10 @@ namespace KittensSports.View
         private bool TemEntradasValidas()
         {
             List<string> listaErros = new List<string>();
-
+            string email = ttbEmail.Text;
+                bool validacao1 = email.Contains("@") && email.Contains(".com");
+            if (validacao1 == false)
+                listaErros.Add("\nE-Mail Invalido!");
             if (string.IsNullOrEmpty(ttbNome.Text))
                 listaErros.Add("\nPreencha o campo Nome!");
             if (string.IsNullOrEmpty(ttbEmail.Text))
