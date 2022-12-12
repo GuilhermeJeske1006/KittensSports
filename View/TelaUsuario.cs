@@ -14,34 +14,41 @@ namespace KittensSports.View
 {
     public partial class TelaUsuario : Form
     {
+
+
         public TelaUsuario()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        public TelaUsuario(TreinamentoUsuario obj)
         {
-
+           // InitializeComponent();
+           // ttbUsuario.Text = obj.Usuario;
+           // ttbTreino.Text = obj.Treinamento;
         }
-
-        private void DgvTreinamento_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void BtnAssociar_Click(object sender, EventArgs e)
-        {
+            private void BtnAssociar_Click(object sender, EventArgs e)
             {
-                if (DgvTreinamento.CurrentRow.Cells != null)
-                {
-                    //Montar objeto asd
-                   // TreinamentoUsuario Treinamento = new TreinamentoUsuario();
+                 if (!TemEntradasValidas())
+                return;
 
-                    new TreinamentoAssociados().ShowDialog();
+                 //Montar objeto 
+                // ttbTreino.Text = DgvTreinamento.CurrentRow.Cells[0].Value;
+                // TreinamentoUsuario Treinamento = new TreinamentoUsuario(0, ttbUsuario.Text, ttbTreino.Text);
+                 //   if (DgvUsuario.CurrentRow.Cells != null)
+                 //       if(DgvTreinamento.CurrentRow.Cells != null)
+
+                        new TreinamentoAssociados().ShowDialog();
 
                     //DgvTreinamento.DataSource = new TreinamentoAssociados().BuscarTreinamentoAssociados();
-                }
+                
             }
+        private bool TemEntradasValidas()
+        {
+            List<string> listaErros = new List<string>();
+            if (string.IsNullOrEmpty(ttbUsuario.Text))
+                listaErros.Add("\nPreencha o campo Nome!");
+            return true;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -64,7 +71,7 @@ namespace KittensSports.View
                     MessageBox.Show("Erro ao comunicar com o banco de dados! Tente novamente!");
                     return;
                 }
-            }
+        }
 
         private void ttbTreino_Click(object sender, EventArgs e)
         {
@@ -85,6 +92,26 @@ namespace KittensSports.View
                 MessageBox.Show("Erro ao comunicar com o banco de dados! Tente novamente!");
                 return;
             }
+        }
+
+        private void DgvUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var row = DgvUsuario.Rows[e.RowIndex];
+            dgUsuario(row);
+        }
+        public void dgUsuario(DataGridViewRow row)
+        {
+            ttbUsuario.Text = row.Cells["username"].Value.ToString();
+        }
+
+        private void DgvTreinamento_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var row = DgvTreinamento.Rows[e.RowIndex];
+            dgtreino(row);
+        }
+        public void dgtreino(DataGridViewRow row)
+        {
+            ttbTreino.Text = row.Cells["Id"].Value.ToString();
         }
     }
 }

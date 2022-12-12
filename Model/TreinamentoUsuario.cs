@@ -11,7 +11,7 @@ namespace KittensSports.Model
         public int Id { get; private set; }
         public Treinamento treinamento { get; private set; }
         public Usuario usuario { get; private set; }
-        public TreinamentoUsuario(int id, Treinamento treinamento, Usuario usuario)
+        public TreinamentoUsuario(int id, Usuario usuario, Treinamento treinamento)
         {
             Id = id;
             this.treinamento = treinamento;
