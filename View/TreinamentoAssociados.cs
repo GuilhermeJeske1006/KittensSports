@@ -55,10 +55,8 @@ namespace KittensSports.View
                 
                 try
                 {
-                    //executando consulta no banco
                     resultadoConsulta = TreiusuController.BuscarPorNome(ttbBusca.Text);
-                    string Nome = ttbBusca.Text;
-                    //verificando se encontrou alguma coisa
+                    string Name = ttbBusca.Text;
                     if (resultadoConsulta.Rows.Count > 0)
                     {
                         dgvBusca.DataSource = resultadoConsulta;
