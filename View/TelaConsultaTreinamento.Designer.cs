@@ -46,43 +46,47 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(29, 26);
+            this.label1.Location = new System.Drawing.Point(33, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(256, 30);
+            this.label1.Size = new System.Drawing.Size(335, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Consulta de treinamento";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(57, 92);
+            this.label2.Location = new System.Drawing.Point(65, 123);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 15);
+            this.label2.Size = new System.Drawing.Size(124, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Buscar Nome - Id";
             // 
             // dataGridView
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(57, 170);
+            this.dataGridView.Location = new System.Drawing.Point(65, 227);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.RowTemplate.Height = 25;
-            this.dataGridView.Size = new System.Drawing.Size(381, 210);
+            this.dataGridView.Size = new System.Drawing.Size(435, 280);
             this.dataGridView.TabIndex = 4;
             // 
             // ttbBusca
             // 
-            this.ttbBusca.Location = new System.Drawing.Point(57, 110);
+            this.ttbBusca.Location = new System.Drawing.Point(65, 147);
+            this.ttbBusca.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ttbBusca.Name = "ttbBusca";
-            this.ttbBusca.Size = new System.Drawing.Size(188, 23);
+            this.ttbBusca.Size = new System.Drawing.Size(214, 27);
             this.ttbBusca.TabIndex = 5;
             // 
             // rbNome
             // 
             this.rbNome.AutoSize = true;
-            this.rbNome.Location = new System.Drawing.Point(268, 90);
+            this.rbNome.Location = new System.Drawing.Point(306, 120);
+            this.rbNome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbNome.Name = "rbNome";
-            this.rbNome.Size = new System.Drawing.Size(115, 19);
+            this.rbNome.Size = new System.Drawing.Size(142, 24);
             this.rbNome.TabIndex = 6;
             this.rbNome.TabStop = true;
             this.rbNome.Text = "Buscar por nome";
@@ -91,9 +95,10 @@
             // rbId
             // 
             this.rbId.AutoSize = true;
-            this.rbId.Location = new System.Drawing.Point(268, 114);
+            this.rbId.Location = new System.Drawing.Point(306, 152);
+            this.rbId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbId.Name = "rbId";
-            this.rbId.Size = new System.Drawing.Size(94, 19);
+            this.rbId.Size = new System.Drawing.Size(117, 24);
             this.rbId.TabIndex = 7;
             this.rbId.TabStop = true;
             this.rbId.Text = "Buscar por Id";
@@ -102,9 +107,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(389, 107);
+            this.button1.Location = new System.Drawing.Point(445, 143);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 26);
+            this.button1.Size = new System.Drawing.Size(120, 35);
             this.button1.TabIndex = 8;
             this.button1.Text = "Consultar";
             this.button1.UseVisualStyleBackColor = true;
@@ -113,9 +119,10 @@
             // tbTodos
             // 
             this.tbTodos.AutoSize = true;
-            this.tbTodos.Location = new System.Drawing.Point(268, 65);
+            this.tbTodos.Location = new System.Drawing.Point(306, 87);
+            this.tbTodos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbTodos.Name = "tbTodos";
-            this.tbTodos.Size = new System.Drawing.Size(94, 19);
+            this.tbTodos.Size = new System.Drawing.Size(117, 24);
             this.tbTodos.TabIndex = 9;
             this.tbTodos.TabStop = true;
             this.tbTodos.Text = "Buscar Todos";
@@ -123,9 +130,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(389, 78);
+            this.button2.Location = new System.Drawing.Point(445, 104);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 23);
+            this.button2.Size = new System.Drawing.Size(120, 31);
             this.button2.TabIndex = 10;
             this.button2.Text = "Alterar";
             this.button2.UseVisualStyleBackColor = true;
@@ -133,9 +141,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(389, 49);
+            this.button3.Location = new System.Drawing.Point(445, 65);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 23);
+            this.button3.Size = new System.Drawing.Size(120, 31);
             this.button3.TabIndex = 11;
             this.button3.Text = "Excluir";
             this.button3.UseVisualStyleBackColor = true;
@@ -143,18 +152,19 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(492, 160);
+            this.button4.Location = new System.Drawing.Point(562, 213);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(8, 8);
+            this.button4.Size = new System.Drawing.Size(9, 11);
             this.button4.TabIndex = 12;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // TelaConsultaTreinamento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 450);
+            this.ClientSize = new System.Drawing.Size(618, 600);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -166,6 +176,7 @@
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "TelaConsultaTreinamento";
             this.Text = "TelaConsultaTreinamento";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();

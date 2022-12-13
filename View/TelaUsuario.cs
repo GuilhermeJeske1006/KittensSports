@@ -37,10 +37,11 @@ namespace KittensSports.View
                    if (DgvUsuario.CurrentRow.Cells != null)
                         if(DgvTreinamento.CurrentRow.Cells != null)
 
-                        new TreinamentoAssociados().ShowDialog();
-
-                    //DgvTreinamento.DataSource = new TreinamentoAssociados().BuscarTreinamentoAssociados();
-                
+                    if (Treinamento.Gravar())
+                        MessageBox.Show("Registro inserido com sucesso!");
+                    else
+                        MessageBox.Show("Erro ao gravar Treinamento. Tente novamente!");
+                    this.Close();                
             }
         private bool TemEntradasValidas()
         {

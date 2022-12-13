@@ -26,12 +26,22 @@ namespace KittensSports
 
         private void associarAosTreinosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new TelaUsuario().ShowDialog();
+
         }
 
         private void gerenciarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new TelaGerenciarUsuario().ShowDialog();
+        }
+
+        private void gerenciarAssociaçãoDeTreinosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new TelaUsuario().ShowDialog();
+        }
+
+        private void gerenciarTreinosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new TreinamentoAssociados().ShowDialog();
         }
     }
 }
