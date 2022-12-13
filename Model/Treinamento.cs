@@ -10,7 +10,6 @@ namespace KittensSports.Model
 {
     public class Treinamento
     {
-        [Key]
         public int Id { get; private set; }
         public string NomeExercicio { get; private set; }
         public float Velocidade { get; private set; }

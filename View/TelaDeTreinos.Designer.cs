@@ -53,11 +53,11 @@
             // 
             this.dgvBuscar.AllowUserToOrderColumns = true;
             this.dgvBuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBuscar.Location = new System.Drawing.Point(72, 236);
+            this.dgvBuscar.Location = new System.Drawing.Point(40, 236);
             this.dgvBuscar.Name = "dgvBuscar";
             this.dgvBuscar.RowHeadersWidth = 51;
             this.dgvBuscar.RowTemplate.Height = 29;
-            this.dgvBuscar.Size = new System.Drawing.Size(384, 188);
+            this.dgvBuscar.Size = new System.Drawing.Size(416, 227);
             this.dgvBuscar.TabIndex = 1;
             // 
             // label1
@@ -73,7 +73,7 @@
             // 
             // ttbBuscar
             // 
-            this.ttbBuscar.Location = new System.Drawing.Point(72, 181);
+            this.ttbBuscar.Location = new System.Drawing.Point(44, 182);
             this.ttbBuscar.Name = "ttbBuscar";
             this.ttbBuscar.Size = new System.Drawing.Size(125, 27);
             this.ttbBuscar.TabIndex = 3;
@@ -92,7 +92,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(72, 149);
+            this.label2.Location = new System.Drawing.Point(40, 149);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 20);
             this.label2.TabIndex = 5;
@@ -111,7 +111,7 @@
             // 
             // ttbUsuario
             // 
-            this.ttbUsuario.Location = new System.Drawing.Point(21, 12);
+            this.ttbUsuario.Location = new System.Drawing.Point(12, 12);
             this.ttbUsuario.Name = "ttbUsuario";
             this.ttbUsuario.Size = new System.Drawing.Size(125, 27);
             this.ttbUsuario.TabIndex = 7;
@@ -120,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 450);
+            this.ClientSize = new System.Drawing.Size(508, 494);
             this.Controls.Add(this.ttbUsuario);
             this.Controls.Add(this.rdbTreinos);
             this.Controls.Add(this.label2);

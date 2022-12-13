@@ -77,13 +77,13 @@ namespace KittensSports.View
         {
             List<string> listaErros = new List<string>();
 
-            if (string.IsNullOrEmpty(ttbNome.Text))
+            if (string.IsNullOrWhiteSpace(ttbNome.Text))
                 listaErros.Add("\nPreencha o campo Nome!");
-            if (string.IsNullOrEmpty(ttbEmail.Text))
+            if (string.IsNullOrWhiteSpace(ttbEmail.Text))
                 listaErros.Add("\nPreencha o campo E-Mail!");
-            if (string.IsNullOrEmpty(ttbSenha.Text))
+            if (string.IsNullOrWhiteSpace(ttbSenha.Text))
                 listaErros.Add("\nPreencha o campo Senha!");
-            if(string.IsNullOrEmpty(ttbUsername.Text))
+            if(string.IsNullOrWhiteSpace(ttbUsername.Text))
                 listaErros.Add("\nPreencha o campo Username!");
 
             if(listaErros.Count > 0)

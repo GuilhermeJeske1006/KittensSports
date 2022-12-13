@@ -21,6 +21,48 @@ namespace KittensSports.View
             InitializeComponent();
             ttbTreino.Enabled = false;
             ttbUsuario.Enabled = false;
+            treino();
+            usuario();
+        }
+
+        public void usuario()
+        {
+            UsuarioController UsuController = new UsuarioController();
+            DataTable resultadoConsulta = new DataTable();
+            try
+            {
+                resultadoConsulta = UsuController.BuscarUsuarios();
+                if (resultadoConsulta.Rows.Count > 0)
+                    DgvUsuario.DataSource = resultadoConsulta;
+                else
+                    MessageBox.Show("Não foi encontrado resultados para esta chave de busca!");
+                return;
+            }
+            catch
+            {
+                MessageBox.Show("Erro ao comunicar com o banco de dados! Tente novamente!");
+                return;
+            }
+        }
+        public void treino()
+        {
+            TreinamentoController TreiController = new TreinamentoController();
+            DataTable resultadoConsulta = new DataTable();
+
+            try
+            {
+                resultadoConsulta = TreiController.BuscarTodos();
+                if (resultadoConsulta.Rows.Count > 0)
+                    DgvTreinamento.DataSource = resultadoConsulta;
+                else
+                    MessageBox.Show("Não foi encontrado resultados para esta chave de busca!");
+                return;
+            }
+            catch
+            {
+                MessageBox.Show("Erro ao comunicar com o banco de dados! Tente novamente!");
+                return;
+            }
         }
 
         public TelaUsuario(TreinamentoUsuario obj, bool alterando)

@@ -43,12 +43,14 @@ namespace KittensSports.View
                     else
                     {
                         MessageBox.Show("Não foi encontrado resultado para a chave informada!");
+                        DgvUsuario.DataSource = " ";
                         return;
                     }
                 }
                 catch //Caso tenha algum erro na conexão com o banco
                 {
                     MessageBox.Show("Falha ao conectar com o banco de dados. Tente novamente!");
+                    DgvUsuario.DataSource = " ";
                 }
             }
 
@@ -62,12 +64,16 @@ namespace KittensSports.View
                     if (resultadoConsulta.Rows.Count > 0)
                         DgvUsuario.DataSource = resultadoConsulta;
                     else
+                    {
                         MessageBox.Show("Não foi encontrado resultados para esta chave de busca!");
+                        DgvUsuario.DataSource = " ";
+                    }
                     return;
                 }
                 catch
                 {
                     MessageBox.Show("Erro ao comunicar com o banco de dados! Tente novamente!");
+                    DgvUsuario.DataSource = " ";
                     return;
                 }
             }

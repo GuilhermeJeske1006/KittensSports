@@ -17,6 +17,15 @@ namespace KittensSports.View
         {
             InitializeComponent();
         }
+
+        public void LimparTela()
+        {
+            lbBpm.Clear();
+            lbInclinacao.Clear();
+            lbNome.Clear();
+            lbTempo.Clear();
+            lbVelocidade.Clear();
+        }
         public TelaCadastroTreinamento(Treinamento obj, bool alterando)
         {
             InitializeComponent();
@@ -52,7 +61,7 @@ namespace KittensSports.View
             if (objTreinamento.Gravar())
             {
                 MessageBox.Show("Registro inserido com sucesso!");
-                
+                LimparTela();
                 return;
             }
             else
@@ -65,11 +74,11 @@ namespace KittensSports.View
         {
             List<string> listaErros = new List<string>();
 
-            if (string.IsNullOrEmpty(lbNome.Text))
+            if (string.IsNullOrWhiteSpace(lbNome.Text))
                 listaErros.Add("\nPreencha o campo Nome!");
-            if (string.IsNullOrEmpty(lbTempo.Text))
+            if (string.IsNullOrWhiteSpace(lbTempo.Text))
                 listaErros.Add("\nPreencha o campo Tempo!");
-            if (string.IsNullOrEmpty(lbVelocidade.Text))
+            if (string.IsNullOrWhiteSpace(lbVelocidade.Text))
                 listaErros.Add("\nPreencha o campo Velocidade!");
             if (listaErros.Count > 0)
             {
@@ -96,12 +105,53 @@ namespace KittensSports.View
                 if (ok)
                 {
                     MessageBox.Show("Registro alterado com sucesso!");
-                    //LimpaTela();
                 }
                 else
                     MessageBox.Show("Erro ao alterar registro no banco de dados! Tente novamente!");
                 this.Close();
             }
+        }
+
+        private void lbVelocidade_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbVelocidade_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void lbTempo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void lbInclinacao_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void lbBpm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LimparTela();
         }
     }
 }

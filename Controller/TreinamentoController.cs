@@ -17,8 +17,8 @@ namespace KittensSports.Controller
             using (banco = new BancoInstance())
             {
                 return banco.Banco.ExecuteNonQuery(
-                    @"insert into Treinamento ( NomeTreinamento, Velocidade, Tempo, inclinacao, BPM) 
-                        values (@nomeTreinamento, @velocidade, @tempo, @inclinacao, @bpm)",
+                    @"insert into Treinamento ( NomeTreinamento, Velocidade, Tempo, inclinacao, BPM, desabiltar) 
+                        values (@nomeTreinamento, @velocidade, @tempo, @inclinacao, @bpm, 0)",
                      "@nomeTreinamento", obj.NomeExercicio,
                     "@velocidade", obj.Velocidade, "@tempo", obj.Tempo, "@inclinacao", obj.Inclinacao, "@bpm", obj.Bpm);
             }
@@ -32,7 +32,7 @@ namespace KittensSports.Controller
             {
                 banco.Banco.ExecuteQuery(
                     @"select Id, NomeTreinamento, Velocidade, Tempo, inclinacao, BPM from Treinamento
-                       where NomeTreinamento like @xpto", out retorno,
+                       where NomeTreinamento like @xpto and desabiltar = 0", out retorno,
                     "@xpto", "%" + nomeExercicio + "%");
                 return retorno;
             }
@@ -45,7 +45,7 @@ namespace KittensSports.Controller
             {
                 banco.Banco.ExecuteQuery(
                     @"select Id, NomeTreinamento, Velocidade, Tempo, inclinacao, BPM from Treinamento
-                       where id = @xpto", out retorno,
+                       where id = @xpto and desabiltar = 0", out retorno,
                     "@xpto", Id );
                 return retorno;
             }
@@ -56,7 +56,8 @@ namespace KittensSports.Controller
             DataTable retorno = new DataTable();
             using (banco = new BancoInstance())
             {
-                banco.Banco.ExecuteQuery(@"select * from Treinamento ", out retorno);
+                banco.Banco.ExecuteQuery(@"select Id, NomeTreinamento, Velocidade, Tempo, inclinacao, BPM from Treinamento
+                       where desabiltar = 0", out retorno);
                 return retorno;
             }
         }
@@ -65,7 +66,7 @@ namespace KittensSports.Controller
             BancoInstance banco;
             using (banco = new BancoInstance())
             {
-                return banco.Banco.ExecuteNonQuery(@"delete from Treinamento where Id = @param",
+                return banco.Banco.ExecuteNonQuery(@"update Treinamento set desabiltar = 1 where Id = @param",
                     "@param", id);
             }
         }

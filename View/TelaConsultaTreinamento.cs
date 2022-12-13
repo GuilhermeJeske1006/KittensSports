@@ -48,12 +48,14 @@ namespace KittensSports.View
                     else
                     {
                         MessageBox.Show("Não foi encontrado resultado para a chave informada!");
+                        dataGridView.DataSource = " ";
                         return;
                     }
                 }
                 catch //Caso tenha algum erro na conexão com o banco
                 {
                     MessageBox.Show("Falha ao conectar com o banco de dados. Tente novamente!");
+                    dataGridView.DataSource = " ";
                 }
             }
 
@@ -70,12 +72,16 @@ namespace KittensSports.View
                         return;
                     }
                     else
+                    {
                         MessageBox.Show("Não foi encontrado resultados para esta chave de busca!");
+                        dataGridView.DataSource = " ";
+                    }
                     return;
                 }
                 catch
                 {
                     MessageBox.Show("Erro ao comunicar com o banco de dados! Tente novamente!");
+                    dataGridView.DataSource = " ";
                     return;
                 }
             }
@@ -88,12 +94,16 @@ namespace KittensSports.View
                     if (resultadoConsulta.Rows.Count > 0)
                         dataGridView.DataSource = resultadoConsulta;
                     else
+                    {
                         MessageBox.Show("Não foi encontrado resultados para esta chave de busca!");
+                        dataGridView.DataSource = " ";
+                    }
                     return;
                 }
                 catch
                 {
                     MessageBox.Show("Erro ao comunicar com o banco de dados! Tente novamente!");
+                    dataGridView.DataSource = " ";
                     return;
                 }
             }
@@ -110,14 +120,14 @@ namespace KittensSports.View
                     string nome = dataGridView.CurrentRow.Cells[1].Value.ToString();
 
                     //Gerando uma mensagem para confirmação do usuário
-                    if (MessageBox.Show("Deseja realmente excluir o treinamento " + nome + " do sistema?",
+                    if (MessageBox.Show("Deseja realmente Desabiltar o treinamento " + nome + " do sistema?",
                             "Mensagem de Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) ==
                         DialogResult.Yes)
                     {
                         if (new TreinamentoController().Excluir(id))
-                            MessageBox.Show("Registro excluído com sucesso!");
+                            MessageBox.Show("Registro Desabilitado com sucesso!");
                         else
-                            MessageBox.Show("Erro ao excluir o registro!");
+                            MessageBox.Show("Erro ao Desabilitar o registro!");
                     }
                     //Após exclusão, atualizar o dataGrid
                     dataGridView.DataSource = new TreinamentoController().BuscarTodos();
