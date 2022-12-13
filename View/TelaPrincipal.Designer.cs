@@ -61,6 +61,7 @@
             // 
             // usuáriosToolStripMenuItem
             // 
+            this.usuáriosToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.usuáriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrarToolStripMenuItem,
             this.gerenciarToolStripMenuItem});
@@ -71,14 +72,14 @@
             // cadastrarToolStripMenuItem
             // 
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.cadastrarToolStripMenuItem.Text = "Cadastrar";
             this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
             // 
             // gerenciarToolStripMenuItem
             // 
             this.gerenciarToolStripMenuItem.Name = "gerenciarToolStripMenuItem";
-            this.gerenciarToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
+            this.gerenciarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.gerenciarToolStripMenuItem.Text = "Gerenciar";
             this.gerenciarToolStripMenuItem.Click += new System.EventHandler(this.gerenciarToolStripMenuItem_Click);
             // 
@@ -118,14 +119,14 @@
             // gerenciarAssociaçãoDeTreinosToolStripMenuItem
             // 
             this.gerenciarAssociaçãoDeTreinosToolStripMenuItem.Name = "gerenciarAssociaçãoDeTreinosToolStripMenuItem";
-            this.gerenciarAssociaçãoDeTreinosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gerenciarAssociaçãoDeTreinosToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
             this.gerenciarAssociaçãoDeTreinosToolStripMenuItem.Text = "Associar Treino";
             this.gerenciarAssociaçãoDeTreinosToolStripMenuItem.Click += new System.EventHandler(this.gerenciarAssociaçãoDeTreinosToolStripMenuItem_Click);
             // 
             // gerenciarTreinosToolStripMenuItem
             // 
             this.gerenciarTreinosToolStripMenuItem.Name = "gerenciarTreinosToolStripMenuItem";
-            this.gerenciarTreinosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gerenciarTreinosToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
             this.gerenciarTreinosToolStripMenuItem.Text = "Gerenciar treinos";
             this.gerenciarTreinosToolStripMenuItem.Click += new System.EventHandler(this.gerenciarTreinosToolStripMenuItem_Click);
             // 

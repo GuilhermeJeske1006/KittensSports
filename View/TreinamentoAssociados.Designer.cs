@@ -62,6 +62,8 @@
             // 
             // button1
             // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Red;
             this.button1.Location = new System.Drawing.Point(376, 162);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
@@ -85,6 +87,8 @@
             // 
             // btnConsulta
             // 
+            this.btnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsulta.ForeColor = System.Drawing.Color.Blue;
             this.btnConsulta.Location = new System.Drawing.Point(370, 228);
             this.btnConsulta.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnConsulta.Name = "btnConsulta";

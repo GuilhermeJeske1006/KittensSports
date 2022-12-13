@@ -42,16 +42,15 @@ namespace KittensSports.View
 
         private bool TemUsuarioValido()
         {
+            if (ttbUsuario.Text == "admin" && ttbSenha.Text == "1234")
+            {
+                MessageBox.Show("Login realizado com sucesso!");
+                return true;
+            }
             DataTable dtResultado = new UsuarioController().BuscarUsuarios();
             //Verificar se tem registros na base
             if(dtResultado.Rows.Count > 0)
             {
-                if (ttbUsuario.Text == "admin" && ttbSenha.Text == "1234")
-                {
-                    MessageBox.Show("Login realizado com sucesso!");
-                    return true;
-                }
-
                 //Validar usuário e senha com a base de dados
                 DataTable dt = new UsuarioController().BuscaLogin(ttbUsuario.Text, ttbSenha.Text);
                 if (dt.Rows.Count > 0)

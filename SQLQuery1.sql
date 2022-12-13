@@ -1,1 +1,1 @@
-﻿select * from usuario;
+﻿insert into usuario(username, senha, fullName, email) values(gui, 4321, guilherme, gui@gmail.com);

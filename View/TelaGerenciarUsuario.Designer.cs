@@ -44,26 +44,29 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(49, 37);
+            this.label1.Location = new System.Drawing.Point(56, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 32);
+            this.label1.Size = new System.Drawing.Size(282, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "Gerencie o Usuário";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 89);
+            this.label3.Location = new System.Drawing.Point(56, 119);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 15);
+            this.label3.Size = new System.Drawing.Size(135, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Procure pelo nome";
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(385, 107);
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterar.ForeColor = System.Drawing.Color.Green;
+            this.btnAlterar.Location = new System.Drawing.Point(440, 143);
+            this.btnAlterar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterar.Size = new System.Drawing.Size(86, 31);
             this.btnAlterar.TabIndex = 3;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
@@ -71,9 +74,12 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(385, 136);
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.ForeColor = System.Drawing.Color.Blue;
+            this.btnBuscar.Location = new System.Drawing.Point(440, 181);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(86, 31);
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -82,24 +88,30 @@
             // DgvUsuario
             // 
             this.DgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvUsuario.Location = new System.Drawing.Point(29, 182);
+            this.DgvUsuario.Location = new System.Drawing.Point(33, 243);
+            this.DgvUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DgvUsuario.Name = "DgvUsuario";
+            this.DgvUsuario.RowHeadersWidth = 51;
             this.DgvUsuario.RowTemplate.Height = 25;
-            this.DgvUsuario.Size = new System.Drawing.Size(424, 224);
+            this.DgvUsuario.Size = new System.Drawing.Size(485, 299);
             this.DgvUsuario.TabIndex = 5;
             // 
             // tbBuscar
             // 
-            this.tbBuscar.Location = new System.Drawing.Point(49, 107);
+            this.tbBuscar.Location = new System.Drawing.Point(56, 143);
+            this.tbBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbBuscar.Name = "tbBuscar";
-            this.tbBuscar.Size = new System.Drawing.Size(172, 23);
+            this.tbBuscar.Size = new System.Drawing.Size(196, 27);
             this.tbBuscar.TabIndex = 6;
             // 
             // btnRemover
             // 
-            this.btnRemover.Location = new System.Drawing.Point(385, 78);
+            this.btnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemover.ForeColor = System.Drawing.Color.Red;
+            this.btnRemover.Location = new System.Drawing.Point(440, 104);
+            this.btnRemover.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(75, 23);
+            this.btnRemover.Size = new System.Drawing.Size(86, 31);
             this.btnRemover.TabIndex = 7;
             this.btnRemover.Text = "Remover";
             this.btnRemover.UseVisualStyleBackColor = true;
@@ -108,9 +120,10 @@
             // rbTodos
             // 
             this.rbTodos.AutoSize = true;
-            this.rbTodos.Location = new System.Drawing.Point(259, 89);
+            this.rbTodos.Location = new System.Drawing.Point(296, 119);
+            this.rbTodos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbTodos.Name = "rbTodos";
-            this.rbTodos.Size = new System.Drawing.Size(93, 19);
+            this.rbTodos.Size = new System.Drawing.Size(115, 24);
             this.rbTodos.TabIndex = 8;
             this.rbTodos.TabStop = true;
             this.rbTodos.Text = "Buscar todos";
@@ -119,9 +132,10 @@
             // rbNome
             // 
             this.rbNome.AutoSize = true;
-            this.rbNome.Location = new System.Drawing.Point(259, 114);
+            this.rbNome.Location = new System.Drawing.Point(296, 152);
+            this.rbNome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbNome.Name = "rbNome";
-            this.rbNome.Size = new System.Drawing.Size(115, 19);
+            this.rbNome.Size = new System.Drawing.Size(142, 24);
             this.rbNome.TabIndex = 9;
             this.rbNome.TabStop = true;
             this.rbNome.Text = "Buscar por nome";
@@ -129,9 +143,9 @@
             // 
             // TelaGerenciarUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 450);
+            this.ClientSize = new System.Drawing.Size(551, 600);
             this.Controls.Add(this.rbNome);
             this.Controls.Add(this.rbTodos);
             this.Controls.Add(this.btnRemover);
@@ -141,6 +155,7 @@
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "TelaGerenciarUsuario";
             this.Text = "TelaGerenciarUsuario";
             ((System.ComponentModel.ISupportInitialize)(this.DgvUsuario)).EndInit();

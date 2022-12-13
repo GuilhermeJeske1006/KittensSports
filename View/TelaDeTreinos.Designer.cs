@@ -41,6 +41,8 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.ForeColor = System.Drawing.Color.Blue;
             this.btnBuscar.Location = new System.Drawing.Point(362, 179);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(94, 29);
@@ -52,6 +54,7 @@
             // dgvBuscar
             // 
             this.dgvBuscar.AllowUserToOrderColumns = true;
+            this.dgvBuscar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvBuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBuscar.Location = new System.Drawing.Point(40, 236);
             this.dgvBuscar.Name = "dgvBuscar";

@@ -33,10 +33,11 @@ namespace KittensSports.View
             {
                 button1.Visible = false;
                 button2.Visible = false;
-                lbNome.Enabled = false;
+                BtnAlterar.Visible = true;
             }
             else
             {
+                BtnAlterar.Enabled = true;
                 button2.Visible = true;
                 button1.Visible = true;
                 lbId.Visible = false;

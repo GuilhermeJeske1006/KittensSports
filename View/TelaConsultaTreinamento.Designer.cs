@@ -63,6 +63,10 @@
             // 
             // dataGridView
             // 
+            this.dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(65, 227);
             this.dataGridView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -107,6 +111,8 @@
             // 
             // button1
             // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Blue;
             this.button1.Location = new System.Drawing.Point(445, 143);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
@@ -119,17 +125,19 @@
             // tbTodos
             // 
             this.tbTodos.AutoSize = true;
+            this.tbTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tbTodos.Location = new System.Drawing.Point(306, 87);
             this.tbTodos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbTodos.Name = "tbTodos";
-            this.tbTodos.Size = new System.Drawing.Size(117, 24);
+            this.tbTodos.Size = new System.Drawing.Size(116, 24);
             this.tbTodos.TabIndex = 9;
-            this.tbTodos.TabStop = true;
             this.tbTodos.Text = "Buscar Todos";
             this.tbTodos.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.Green;
             this.button2.Location = new System.Drawing.Point(445, 104);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
@@ -141,6 +149,8 @@
             // 
             // button3
             // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.Red;
             this.button3.Location = new System.Drawing.Point(445, 65);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
@@ -164,6 +174,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(618, 600);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);

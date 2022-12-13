@@ -74,6 +74,8 @@
             // 
             // BtnAssociar
             // 
+            this.BtnAssociar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAssociar.ForeColor = System.Drawing.Color.Blue;
             this.BtnAssociar.Location = new System.Drawing.Point(224, 160);
             this.BtnAssociar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnAssociar.Name = "BtnAssociar";
