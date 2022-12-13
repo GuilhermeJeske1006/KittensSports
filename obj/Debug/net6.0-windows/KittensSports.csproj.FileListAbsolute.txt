@@ -87,3 +87,4 @@ C:\Users\ander\source\repos\KittensSports\obj\Debug\net6.0-windows\KittensSports
 C:\Users\ander\source\repos\KittensSports\obj\Debug\net6.0-windows\KittensSports.csproj.CopyComplete
 C:\Users\ander\source\repos\KittensSports\obj\Debug\net6.0-windows\KittensSports.genruntimeconfig.cache
 C:\Users\ander\source\repos\KittensSports\obj\Debug\net6.0-windows\ref\KittensSports.dll
+C:\Users\ander\source\repos\KittensSports\obj\Debug\net6.0-windows\KittensSports.View.TelaDeTreinos.resources

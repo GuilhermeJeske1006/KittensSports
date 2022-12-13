@@ -18,6 +18,7 @@ namespace KittensSports.View
             InitializeComponent();
         }
 
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //Validando a digitação dos campos usuário e senha
@@ -54,7 +55,14 @@ namespace KittensSports.View
                 //Validar usuário e senha com a base de dados
                 DataTable dt = new UsuarioController().BuscaLogin(ttbUsuario.Text, ttbSenha.Text);
                 if (dt.Rows.Count > 0)
-                    return true;
+                {
+
+                    MessageBox.Show("Login realizado com sucesso!");
+                    string user = ttbUsuario.Text;
+                    this.Hide();
+                    new TelaDeTreinos().ShowDialog();
+                    this.Close();
+                }
             }
             return false;
         }

@@ -33,6 +33,17 @@ namespace KittensSports.Controller
             }
         }
 
+        public DataTable BuscarTodosu()
+        {
+            BancoInstance banco;
+            DataTable retorno = new DataTable();
+            using (banco = new BancoInstance())
+            {
+                banco.Banco.ExecuteQuery(@"select u.IdTreinamento_usuario, u.username, t.NomeTreinamento from Treinamento_usuario u, Treinamento t where u.IdTreinamento = t.Id", out retorno);
+                return retorno;
+            }
+        }
+
         public DataTable BuscarPortreino(string Nome)
         {
             BancoInstance banco;
@@ -40,6 +51,18 @@ namespace KittensSports.Controller
             using (banco = new BancoInstance())
             {
                 banco.Banco.ExecuteQuery(@"select u.IdTreinamento_usuario, u.username, t.NomeTreinamento from Treinamento_usuario u, Treinamento t where u.IdTreinamento = t.Id and t.NomeTreinamento like @param", out retorno, "@param", "%" + Nome + "%");
+                return retorno;
+            }
+        }
+
+
+        public DataTable BuscarPortreinos(string Nome)
+        {
+            BancoInstance banco;
+            DataTable retorno = new DataTable();
+            using (banco = new BancoInstance())
+            {
+                banco.Banco.ExecuteQuery(@"select u.IdTreinamento_usuario, u.username, t.NomeTreinamento from Treinamento_usuario u, Treinamento t where u.IdTreinamento = t.Id and t.NomeTreinamento like @param and u.username like @Xp", out retorno, "@param", "%" + Nome + "%");
                 return retorno;
             }
         }
