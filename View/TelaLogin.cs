@@ -1,4 +1,5 @@
 ﻿using KittensSports.Controller;
+using KittensSports.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +18,6 @@ namespace KittensSports.View
         {
             InitializeComponent();
         }
-
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -56,11 +56,11 @@ namespace KittensSports.View
                 DataTable dt = new UsuarioController().BuscaLogin(ttbUsuario.Text, ttbSenha.Text);
                 if (dt.Rows.Count > 0)
                 {
-
+                    Usuario usuario = new Usuario(ttbUsuario.Text, "a", "a", "a");
                     MessageBox.Show("Login realizado com sucesso!");
                     string user = ttbUsuario.Text;
                     this.Hide();
-                    new TelaDeTreinos().ShowDialog();
+                    new TelaDeTreinos(usuario, true).ShowDialog();
                     this.Close();
                 }
             }

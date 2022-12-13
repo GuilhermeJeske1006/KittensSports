@@ -35,6 +35,7 @@
             this.rdbTodos = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.rdbTreinos = new System.Windows.Forms.RadioButton();
+            this.ttbUsuario = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +47,7 @@
             this.btnBuscar.TabIndex = 0;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
             // dgvBuscar
             // 
@@ -108,11 +109,19 @@
             this.rdbTreinos.Text = "BuscarTreinos";
             this.rdbTreinos.UseVisualStyleBackColor = true;
             // 
+            // ttbUsuario
+            // 
+            this.ttbUsuario.Location = new System.Drawing.Point(21, 12);
+            this.ttbUsuario.Name = "ttbUsuario";
+            this.ttbUsuario.Size = new System.Drawing.Size(125, 27);
+            this.ttbUsuario.TabIndex = 7;
+            // 
             // TelaDeTreinos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(508, 450);
+            this.Controls.Add(this.ttbUsuario);
             this.Controls.Add(this.rdbTreinos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.rdbTodos);
@@ -137,5 +146,6 @@
         private RadioButton rdbTodos;
         private Label label2;
         private RadioButton rdbTreinos;
+        private TextBox ttbUsuario;
     }
 }
