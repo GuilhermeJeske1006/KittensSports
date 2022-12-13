@@ -60,6 +60,7 @@ namespace KittensSports.View
                     if (resultadoConsulta.Rows.Count > 0)
                     {
                         dgvBusca.DataSource = resultadoConsulta;
+                        ttbBusca.Clear();
                         return;
                     }
                     else
@@ -81,7 +82,11 @@ namespace KittensSports.View
                     resultadoConsulta = TreiusuController.BuscarPortreino(ttbBusca.Text);
                     string Nome = ttbBusca.Text;
                     if (resultadoConsulta.Rows.Count > 0)
+                    {
                         dgvBusca.DataSource = resultadoConsulta;
+                        ttbBusca.Clear();
+                        return;
+                    }
                     else
                         MessageBox.Show("Não foi encontrado resultados para esta chave de busca!");
                     return;

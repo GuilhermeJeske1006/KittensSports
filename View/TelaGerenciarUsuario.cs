@@ -37,6 +37,7 @@ namespace KittensSports.View
                     if (resultadoConsulta.Rows.Count > 0)
                     {
                         DgvUsuario.DataSource = resultadoConsulta;
+                        tbBuscar.Clear();
                         return;
                     }
                     else

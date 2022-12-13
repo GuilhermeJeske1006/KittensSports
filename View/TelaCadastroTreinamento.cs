@@ -50,7 +50,11 @@ namespace KittensSports.View
 
             //Gravar objeto no banco
             if (objTreinamento.Gravar())
+            {
                 MessageBox.Show("Registro inserido com sucesso!");
+                
+                return;
+            }
             else
                 MessageBox.Show("Erro ao gravar Treinamento. Tente novamente!");
             this.Close();

@@ -42,6 +42,7 @@ namespace KittensSports.View
                     if (resultadoConsulta.Rows.Count > 0)
                     {
                         dataGridView.DataSource = resultadoConsulta;
+                        ttbBusca.Clear();
                         return;
                     }
                     else
@@ -63,7 +64,11 @@ namespace KittensSports.View
                 {
                     resultadoConsulta = TreiController.BuscarPorId(int.Parse(ttbBusca.Text));
                     if (resultadoConsulta.Rows.Count > 0)
+                    {
                         dataGridView.DataSource = resultadoConsulta;
+                        ttbBusca.Clear();
+                        return;
+                    }
                     else
                         MessageBox.Show("Não foi encontrado resultados para esta chave de busca!");
                     return;
