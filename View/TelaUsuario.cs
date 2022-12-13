@@ -19,6 +19,8 @@ namespace KittensSports.View
         public TelaUsuario()
         {
             InitializeComponent();
+            ttbTreino.Enabled = false;
+            ttbUsuario.Enabled = false;
         }
 
         public TelaUsuario(TreinamentoUsuario obj, bool alterando)
@@ -53,7 +55,6 @@ namespace KittensSports.View
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
             TreinamentoController TreiController = new TreinamentoController();
             DataTable resultadoConsulta = new DataTable();
 
@@ -77,7 +78,6 @@ namespace KittensSports.View
         {
             UsuarioController UsuController = new UsuarioController();
             DataTable resultadoConsulta = new DataTable();
-
             try
             {
                 resultadoConsulta = UsuController.BuscarUsuarios();
